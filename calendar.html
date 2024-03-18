@@ -6,10 +6,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
   <style>
-    /*#1 */
     @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
 
-    /*#2 */
     * {
       margin: 0;
       padding: 0;
@@ -17,9 +15,7 @@
       font-family: 'Poppins', sans-serif;
     }
 
-    /*#3 */
     button {
-      /* button 요소에 기본적으로 설정되는 스타일 속성 초기화 */
       border: none;
       outline: none;
       background-color: transparent;
@@ -27,40 +23,31 @@
       cursor: pointer;
     }
 
-    /*#4 */
-    body {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      min-height: 100vh;
-      background: #008aff;
-    }
-
-    /*#5 */
     .wrapper {
-      width: 450px;
+      width: 274.5px;
+      height: 180px;
       background: #fff;
       border-radius: 10px;
-      padding: 25px;
+      padding: 12px;
+      border: 1px solid #767676;
     }
 
-    /*#6*/
     .wrapper .nav {
       display: flex;
       align-items: center;
       justify-content: space-between;
-      margin-bottom: 30px;
+      margin-bottom: 10px;
     }
 
     .wrapper .nav .current-date {
-      font-size: 24px;
+      font-size: 12px;
       font-weight: 600;
     }
 
     .wrapper .nav button {
-      width: 38px;
-      height: 38px;
-      font-size: 30px;
+      width: 10px;
+      height: 10px;
+      font-size: 10px;
       color: #878787;
     }
 
@@ -69,31 +56,25 @@
       list-style: none;
       flex-wrap: wrap;
       text-align: center;
+      font-size: 10px;
     }
 
-    .calendar .weeks li {
-      font-weight: 500;
-    }
 
     .calendar .days {
-      margin-bottom: 20px;
+      margin-bottom: 5px;
     }
 
     .calendar ul li {
-      /*#8*/
       width: calc(100% / 7);
-      /*#9*/
       position: relative;
     }
 
     .calendar .days li {
-      /*#10*/
       z-index: 1;
-      margin-top: 30px;
+      margin-top: 4px;
       cursor: pointer;
     }
 
-    /*#11*/
     .days li.inactive {
       color: #aaa;
     }
@@ -105,8 +86,8 @@
     .calendar .days li::before {
       position: absolute;
       content: '';
-      height: 40px;
-      width: 40px;
+      height: 22px;
+      width: 22px;
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
@@ -114,8 +95,12 @@
       z-index: -1;
     }
 
+    .days li:hover {
+      color: white;
+    }
+
     .days li:hover::before {
-      background: #f2f2f2;
+      background: #E9280E;
     }
 
     .days li.active::before {
@@ -130,7 +115,7 @@
       <div class="nav">
         <button class="material-icons">
           < </button>
-            <p class="current-date">September 2022</p>
+            <p class="current-date">March 2024</p>
             <button class="material-icons"> > </span>
       </div>
     </header>
@@ -145,10 +130,11 @@
         <li>Sat</li>
       </ul>
       <ul class="days">
+        <li class="inactive">25</li>
+        <li class="inactive">26</li>
         <li class="inactive">27</li>
         <li class="inactive">28</li>
         <li class="inactive">29</li>
-        <li class="inactive">30</li>
         <li>1</li>
         <li>2</li>
         <li>3</li>

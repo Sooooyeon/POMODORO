@@ -1,0 +1,138 @@
+body{
+  @font-face {
+      font-family: 'Pretendard';
+      src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+      font-weight: 400;
+      font-style: normal;
+  }
+}
+
+header{
+  max-width: 1200px;
+  height: 150px;
+  margin: 0 auto;
+  padding: 0 5%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header .logo{
+  width: 125px;
+  height: 64px;
+}
+
+header .link *{
+  margin-left: 8px;
+  color: #72281D;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+header .link *:hover{
+  color: #E9280E
+}
+
+header .login-btn{
+  padding-right: 12px;
+  border-right: 1px solid #72281D;
+}
+
+main{
+  max-width: 1200px;
+  margin: auto;
+  height: calc(100% - 150px);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+main .timer {
+  width: 567px;
+  background: rgba(233, 40, 14, 1);
+  background: linear-gradient(-45deg, rgba(255, 153, 80, 1) 0%, rgba(233, 40, 14, 1) 100%);
+  border-radius: 15px;
+  aspect-ratio: 1/1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+}
+
+main .timer .set-time{
+  font-size: 200px;
+  text-align: center;
+  color: white;
+  letter-spacing: -5px;
+}
+
+main .timer .set-text{
+  position: relative;
+  color: white;
+  font-size: 36px;
+}
+
+main .timer .set-text::before{
+  position: absolute;
+  content: '';
+  height: 1px;
+  width: 200px;
+  top: 50%;
+  left: -360%;
+  transform: translate(0,-50%);
+  background-color: white;
+}
+
+main .timer .set-text::after {
+  position: absolute;
+  content: '';
+  height: 1px;
+  width: 200px;
+  top: 50%;
+  left: 110%;
+  transform: translate(0, -50%);
+  background-color: white;
+}
+
+main .timer .set-btn{
+  width: 160px;
+  height: 100px;
+  background: rgba(255, 199, 159, 1);
+  background: linear-gradient(90deg, rgba(255, 236, 223, 1) 0%, rgba(255, 199, 159, 1) 100%);
+  color: #72281D;
+  border-radius: 15px;
+  margin: 5px;
+  margin-left: -1px;
+  vertical-align: bottom;
+  font-size: 35px;
+  cursor: pointer;
+}
+
+main .timer .set-btn span{
+  font-size: 20px;
+  color: #72281D;
+  vertical-align: bottom;
+}
+
+main .main-right{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+main .main-right .utils{
+  display: flex;
+  gap: 18px;
+}
+
+main .main-right .utils section{
+  width: 274px;
+  height: 180px;
+  border: 1px solid #333;
+  border-radius: 15px;
+}
+
+main .main-right .todo{
+  height: 367px;
+}

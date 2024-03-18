@@ -5,37 +5,49 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>뽀모도로</title>
+  <link rel="stylesheet" href="./css/reset.css">
+  <link rel="stylesheet" href="./css/style.css">
 </head>
 
 <body>
   <header>
-    <h1><img src="" alt="뽀모도로"></h1>
-    <div>
-      <a href="./login.html">로그인</a>
-      <a href="./signup.html">회원가입</a>
+    <h1><img class="logo" src="./img/POMODORO_logo.png" alt="뽀모도로"></h1>
+    <div class="link">
+      <a class="header-btn, login-btn" href="./login.html">로그인</a>
+      <a class="header-btn" href="./signup.html">회원가입</a>
     </div>
   </header>
   <main>
-    <section>
-      <button>25</button>
-      <button>5</button>
-      <button>30</button>
-      <button>start</button>
-      <button>stop</button>
-      <button>reset</button>
+    <section class="timer">
+      <p class="set-time">25:00</p>
+      <p class="set-text">SET</p>
+      <div>
+        <button class="set-btn">25 <span>minute</span></button>
+        <button class="set-btn">5 <span>minute</span></button>
+        <button class="set-btn">30 <span>minute</span></button>
+      </div>
+      <div>
+        <button class="set-btn">START</button>
+        <button class="set-btn">STOP</button>
+        <button class="set-btn">RESET</button>
+      </div>
     </section>
-    <section>캘린더</section>
-    <section>오늘의 날씨</section>
-    <section>
-      <p>오늘의 할 일</p>
-      <ul>
-        <li>빨래 돌리기</li>
-        <li>화장실 청소하기</li>
-        <li>kosta 수업 복습하기</li>
-      </ul>
-      <input type="text">
-      <button>할 일 추가하기</button>
-    </section>
+    <div class="main-right">
+      <div class="utils">
+        <section>캘린더</section>
+        <section>오늘의 날씨</section>
+      </div>
+      <section class="todo">
+        <p>오늘의 할 일</p>
+        <ul>
+          <li>빨래 돌리기</li>
+          <li>화장실 청소하기</li>
+          <li>kosta 수업 복습하기</li>
+        </ul>
+        <input type="text">
+        <button>할 일 추가하기</button>
+      </section>
+    </div>
   </main>
   <footer></footer>
 </body>
