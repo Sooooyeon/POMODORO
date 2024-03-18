@@ -5,6 +5,8 @@ body{
       font-weight: 400;
       font-style: normal;
   }
+  height: 100vh;
+  overflow: hidden;
 }
 
 header{
@@ -128,11 +130,116 @@ main .main-right .utils{
 
 main .main-right .utils section{
   width: 274px;
-  height: 180px;
-  border: 1px solid #333;
+  height: 200px;
+  /* border: 1px solid #333; */
   border-radius: 15px;
 }
 
+
+
+.util-wrapper {
+  width: 274px;
+  height: 200px;
+  background: #fff;
+  border-radius: 10px;
+  padding: 12px;
+  border: 1px solid #767676;
+  font-size: 14px;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.util-wrapper .nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.calendar-wrapper .nav .current-date {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.calendar-wrapper .nav button {
+  width: 10px;
+  height: 10px;
+  color: #878787;
+}
+
+.calendar ul {
+  display: flex;
+  list-style: none;
+  flex-wrap: wrap;
+  text-align: center;
+  font-size: 14px;
+}
+
+
+.calendar .days {
+  margin-bottom: 6px;
+}
+
+.calendar ul li {
+  width: calc(100% / 7);
+  position: relative;
+}
+
+.calendar .days li {
+  z-index: 1;
+  margin-top: 5px;
+  cursor: pointer;
+}
+
+.days li.inactive {
+  color: #aaa;
+}
+
+.days li.active {
+  color: #fff;
+}
+
+.calendar .days li::before {
+  position: absolute;
+  content: '';
+  height: 22px;
+  width: 22px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  z-index: -1;
+}
+
+.days li:hover {
+  color: white;
+}
+
+.days li:hover::before {
+  background: #E9280E;
+}
+
+.days li.active::before {
+  background: #008aff;
+}
+
+.weather-box{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.weather-img{
+  width: 100px;
+  margin: 10px 0;
+}
+
 main .main-right .todo{
-  height: 367px;
+  box-sizing: border-box;
+  height: 347px;
+  background-color: #F4F4F4;
+  border-radius: 15px;
+  padding: 30px;
 }
