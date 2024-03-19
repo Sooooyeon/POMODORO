@@ -5,14 +5,13 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>뽀모도로</title>
-  <link rel="stylesheet" href="./css/reset.css">
   <link rel="stylesheet" href="./css/style.css">
   <link rel="stylesheet" href="./css/./main.css">
 </head>
 
 <body>
   <header>
-    <h1><img class="logo" src="./img/POMODORO_logo.png" alt="뽀모도로"></h1>
+    <h1><a href="./index.html"><img class="logo" src="./img/POMODORO_logo.png" alt="뽀모도로"></a></h1>
     <div class="link">
       <a class="header-btn, login-btn" href="./login.html">로그인</a>
       <a class="header-btn" href="./signup.html">회원가입</a>
@@ -105,14 +104,24 @@
         </section>
       </div>
       <section class="todo">
-        <p>오늘의 할 일</p>
-        <ul>
-          <li>빨래 돌리기</li>
-          <li>화장실 청소하기</li>
-          <li>kosta 수업 복습하기</li>
-        </ul>
-        <input type="text">
-        <button>할 일 추가하기</button>
+        <div>
+          <p class="todo-title">오늘의 할 일</p>
+          <ul class="todo-list">
+            <li class="todo-item"><input type="checkbox" id="ch-box1" checked>
+              <label for="ch-box1">빨래 돌리기</label>
+            </li>
+            <li class="todo-item"><input type="checkbox" id="ch-box2">
+              <label for="ch-box2">화장실 청소하기</label>
+            </li>
+            <li class="todo-item"><input type="checkbox" id="ch-box3">
+              <label for="ch-box3">C++ 수업 복습하기</label>
+            </li>
+          </ul>
+        </div>
+        <div class="add-todo">
+          <input type="text" class="todo-input">
+          <button class="add-btn">할 일 추가하기</button>
+        </div>
       </section>
     </div>
   </main>
