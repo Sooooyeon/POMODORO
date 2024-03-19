@@ -1,12 +1,20 @@
+@font-face {
+    font-family: 'Pretendard';
+    src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+@font-face {
+  font-family: 'Pretendard_Bold';
+  src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Bold.woff') format('woff');
+  font-weight: 700;
+  font-style: normal;
+}
+
 body{
-  @font-face {
-      font-family: 'Pretendard';
-      src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
-      font-weight: 400;
-      font-style: normal;
-  }
   height: 100vh;
   overflow: hidden;
+  font-family: 'Pretendard';
 }
 
 header{
@@ -26,220 +34,29 @@ header .logo{
 
 header .link *{
   margin-left: 8px;
-  color: #72281D;
-  font-size: 16px;
-  font-weight: 500;
+  color: #000;
+  font-size: 18px;
 }
 
 header .link *:hover{
   color: #E9280E
 }
 
-header .login-btn{
-  padding-right: 12px;
-  border-right: 1px solid #72281D;
-}
-
-main{
-  max-width: 1200px;
-  margin: auto;
-  height: calc(100% - 150px);
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-main .timer {
-  width: 567px;
-  background: rgba(233, 40, 14, 1);
-  background: linear-gradient(-45deg, rgba(255, 153, 80, 1) 0%, rgba(233, 40, 14, 1) 100%);
-  border-radius: 15px;
-  aspect-ratio: 1/1;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-
-}
-
-main .timer .set-time{
-  font-size: 200px;
-  text-align: center;
-  color: white;
-  letter-spacing: -5px;
-}
-
-main .timer .set-text{
-  position: relative;
-  color: white;
-  font-size: 36px;
-}
-
-main .timer .set-text::before{
-  position: absolute;
-  content: '';
-  height: 1px;
-  width: 200px;
-  top: 50%;
-  left: -360%;
-  transform: translate(0,-50%);
-  background-color: white;
-}
-
-main .timer .set-text::after {
-  position: absolute;
-  content: '';
-  height: 1px;
-  width: 200px;
-  top: 50%;
-  left: 110%;
-  transform: translate(0, -50%);
-  background-color: white;
-}
-
-main .timer .set-btn{
-  width: 160px;
-  height: 100px;
-  background: rgba(255, 199, 159, 1);
-  background: linear-gradient(90deg, rgba(255, 236, 223, 1) 0%, rgba(255, 199, 159, 1) 100%);
-  color: #72281D;
-  border-radius: 15px;
-  margin: 5px;
-  margin-left: -1px;
-  vertical-align: bottom;
-  font-size: 35px;
-  cursor: pointer;
-}
-
-main .timer .set-btn span{
-  font-size: 20px;
-  color: #72281D;
-  vertical-align: bottom;
-}
-
-main .main-right{
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
-
-main .main-right .utils{
-  display: flex;
-  gap: 18px;
-}
-
-main .main-right .utils section{
-  width: 274px;
-  height: 200px;
-  /* border: 1px solid #333; */
-  border-radius: 15px;
-}
-
-
-
-.util-wrapper {
-  width: 274px;
-  height: 200px;
-  background: #fff;
-  border-radius: 10px;
-  padding: 12px;
-  border: 1px solid #767676;
-  font-size: 14px;
-  box-sizing: border-box;
-  text-align: center;
-}
-
-.util-wrapper .nav {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin-bottom: 10px;
-}
-
-.calendar-wrapper .nav .current-date {
-  font-size: 18px;
-  font-weight: 600;
-}
-
-.calendar-wrapper .nav button {
-  width: 10px;
-  height: 10px;
-  color: #878787;
-}
-
-.calendar ul {
-  display: flex;
-  list-style: none;
-  flex-wrap: wrap;
-  text-align: center;
-  font-size: 14px;
-}
-
-
-.calendar .days {
-  margin-bottom: 6px;
-}
-
-.calendar ul li {
-  width: calc(100% / 7);
+header .login-btn,.home-btn{
+  padding-right: 14px;
+  border-right: 1px solid #767676;
   position: relative;
 }
 
-.calendar .days li {
-  z-index: 1;
-  margin-top: 5px;
-  cursor: pointer;
-}
-
-.days li.inactive {
-  color: #aaa;
-}
-
-.days li.active {
-  color: #fff;
-}
-
-.calendar .days li::before {
+header .home-btn::before{
   position: absolute;
   content: '';
   height: 22px;
   width: 22px;
   top: 50%;
-  left: 50%;
+  left: -60%;
   transform: translate(-50%, -50%);
-  border-radius: 50%;
-  z-index: -1;
+  background: url("../img/tomato-timer.png"); 
+  background-size: 22px 22px;
 }
 
-.days li:hover {
-  color: white;
-}
-
-.days li:hover::before {
-  background: #E9280E;
-}
-
-.days li.active::before {
-  background: #008aff;
-}
-
-.weather-box{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-}
-
-.weather-img{
-  width: 100px;
-  margin: 10px 0;
-}
-
-main .main-right .todo{
-  box-sizing: border-box;
-  height: 347px;
-  background-color: #F4F4F4;
-  border-radius: 15px;
-  padding: 30px;
-}
