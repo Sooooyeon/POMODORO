@@ -1,4 +1,4 @@
-/* font ------------------------- */
+/* font */
 @font-face {
   font-family: 'Pretendard-regular';
   src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
@@ -13,7 +13,7 @@
   font-style: normal;
 }
 
-/* reset ------------------------- */
+/* reset */
 body {
   margin: 0;
 }
@@ -62,9 +62,6 @@ p {
   margin: 0;
 }
 
-
-
-
 /* css 시작 */
 body{
   height: 100%;
@@ -72,7 +69,6 @@ body{
   font-family: 'Pretendard';
   
 }
-
 
 /* header */
 header{
@@ -117,7 +113,6 @@ header .home-btn::before{
   background: url("../img/tomato-timer.png"); 
   background-size: 22px 22px;
 }
-
 
 /* footer */
 .footer {

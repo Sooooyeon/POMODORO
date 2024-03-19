@@ -1,9 +1,5 @@
-/* 버튼 */
 [class^='btn'] {
   display: inline-flex;
-
-  /* 부모 요소에 flex가 적용되어, 인라인 블록 주지 않아도 너비값, 높이값을 가질 수 있으나 유지보수를 생각해 인라인 블록을 주는 것이 좋음 (컴포넌트의 개념) */
-  /* width: 100px; */
   height: 40px;
   padding: 0 20px 0 46px;
   background-color: rgb(255, 255, 255);
@@ -14,7 +10,6 @@
   background-position: 10px 50%;
 }
 
-/* 로그인 */
 .login {
   margin-top: 70px;
 }
