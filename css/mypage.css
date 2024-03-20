@@ -92,15 +92,15 @@ main{
   font-weight: 500;
   cursor: pointer;
 }
-
+.days .date.active::before {
+  background: #990d0d;
+}
 .days .date:hover::before {
   background: rgba(255, 199, 159, 1);
   background: linear-gradient(90deg, rgba(255, 236, 223, 1) 0%, rgba(255, 199, 159, 1) 100%);
 }
 
-.days .date.active::before {
-  background: #008aff;
-}
+
 
 .todo{
   width: 567px;

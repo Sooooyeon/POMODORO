@@ -45,7 +45,13 @@ const renderCalendar = () => {
   }
 
   for(let i = 1; i<=lastDateOfMonth; i++){
-    liTag += `<li class="date">${i}</li>`;
+    let isToday =
+      i === date.getDate() &&
+      month === new Date().getMonth() &&
+      year === new Date().getFullYear()
+        ? 'active'
+        : '';
+    liTag += `<li class="date ${isToday}">${i}</li>`;
   }
   days.innerHTML = liTag;
 }

@@ -183,9 +183,8 @@ main .main-right .utils section{
 }
 
 .days .date.active::before {
-  background: #008aff;
+  background: #E9280E;
 }
-
 .weather-box{
   display: flex;
   flex-direction: column;
