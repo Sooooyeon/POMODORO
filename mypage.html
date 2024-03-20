@@ -17,14 +17,13 @@
       <button class="header-btn">로그아웃</button>
     </div>
   </header>
-  <div>
-    <section>
-      <div class="util-wrapper">
+  <main>
+    <div class="util-wrapper">
+      <section>
         <div class="nav">
-          <button class="material-icons">
-            < </button>
-              <p class="current-date">March 2024</p>
-              <button class="material-icons"> > </span>
+          <button class="material-icons"> &#60; </button>
+          <p class="current-date">March 2024</p>
+          <button class="material-icons"> &#62; </span>
         </div>
         <div class="calendar">
           <ul class="weeks">
@@ -75,17 +74,27 @@
             <li>31</li>
           </ul>
         </div>
-      </div>
-    </section>
+      </section>
+    </div>
     <section class="todo">
-      <p>오늘의 할 일</p>
-      <ul>
-        <li>빨래 돌리기</li>
-        <li>화장실 청소하기</li>
-        <li>kosta 수업 복습하기</li>
-      </ul>
-      <input type="text">
-      <button>할 일 추가하기</button>
+      <div>
+        <p class="todo-title">What I did 2024.03.20 </p>
+        <ul class="todo-list">
+          <li class="todo-item"><input type="checkbox" id="ch-box1" checked>
+            <label for="ch-box1">빨래 돌리기</label>
+          </li>
+          <li class="todo-item"><input type="checkbox" id="ch-box2">
+            <label for="ch-box2">화장실 청소하기</label>
+          </li>
+          <li class="todo-item"><input type="checkbox" id="ch-box3">
+            <label for="ch-box3">C++ 수업 복습하기</label>
+          </li>
+        </ul>
+      </div>
+      <div class="add-todo">
+        <input type="text" class="todo-input">
+        <button class="add-btn">할 일 추가하기</button>
+      </div>
     </section>
   </div>
 </body>

@@ -1,12 +1,45 @@
-.calendar-wrapper .nav .current-date {
-  font-size: 18px;
+main{
+  max-width: 1200px;
+  margin: auto;
+  height: calc(100% - 150px);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.util-wrapper {
+  width: 567px;
+  aspect-ratio: 1/1;
+  background: #fff;
+  border-radius: 10px;
+  padding: 30px;
+  font-size: 14px;
+  box-sizing: border-box;
+  text-align: center;
+  
+  background: rgba(233, 40, 14, 1);
+  background: linear-gradient(-45deg, rgba(255, 153, 80, 1) 0%, rgba(233, 40, 14, 1) 100%);
+
+  color: white;
+}
+
+.util-wrapper .nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+
+.nav .current-date {
+  font-size: 30px;
   font-weight: 600;
 }
 
-.calendar-wrapper .nav button {
-  width: 10px;
-  height: 10px;
-  color: #878787;
+.nav button {
+  width: 30px;
+  height: 30px;
+  font-size: 30px;
+  color: #ffffff;
 }
 
 .calendar ul {
@@ -14,7 +47,7 @@
   list-style: none;
   flex-wrap: wrap;
   text-align: center;
-  font-size: 14px;
+  font-size: 30px;
 }
 
 
@@ -29,12 +62,12 @@
 
 .calendar .days li {
   z-index: 1;
-  margin-top: 4px;
+  margin-top: 25px;
   cursor: pointer;
 }
 
 .days li.inactive {
-  color: #aaa;
+  color: #cccccc;
   cursor: pointer;
 }
 
@@ -45,8 +78,8 @@
 .calendar .days li::before {
   position: absolute;
   content: '';
-  height: 22px;
-  width: 22px;
+  height: 50px;
+  width: 50px;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -56,13 +89,128 @@
 }
 
 .days li:hover {
-  color: white;
+  color: #72281D;
+  font-weight: 700;
 }
 
 .days li:hover::before {
-  background: #E9280E;
+  background: rgba(255, 199, 159, 1);
+  background: linear-gradient(90deg, rgba(255, 236, 223, 1) 0%, rgba(255, 199, 159, 1) 100%);
 }
 
 .days li.active::before {
   background: #008aff;
+}
+
+.todo{
+  width: 567px;
+  aspect-ratio: 1/1;
+  box-sizing: border-box;
+  background-color: #F4F4F4;
+  border-radius: 15px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: auto;
+}
+
+.todo-list:last-child{
+  margin-bottom: 30px;
+}
+
+.todo-title{
+  text-align: center;
+  font-size: 24px;
+  font-weight: 700;
+  color: #E9280E;
+  margin: 20px 0 30px 0;
+}
+
+.todo-item{
+  font-size: 18px;
+  padding: 5px;
+  color: #FF6B00;
+  font-weight: 500;
+}
+
+.todo-item input{
+  width: 15px;
+  height: 15px;
+  margin-right: 6px;
+}
+
+.todo-item input[type="checkbox"]:checked+label {
+  color: #aaa;
+  text-decoration: line-through;
+}
+.todo .add-todo{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border-radius: 5px;
+  z-index: 10;
+}
+.todo .todo-input{
+  width: 100%;
+  height: 36px;
+  border: 1px solid #8e8e8e;
+  border-radius: 5px;
+  padding: 0 10px;
+  box-sizing: border-box;
+}
+.todo .todo-input:focus {
+outline: none;
+}
+
+.todo .add-btn{
+  width: 180px;
+  height: 36px;
+  background-color: #E9280E;
+  color: white;
+  border-radius: 5px;
+}
+
+@media (max-width: 1140px) {
+  main{
+    flex-direction: column;
+  }
+  .util-wrapper{
+    margin-bottom: 30px;
+  }
+  main .main-right .todo{
+    height: 100%;
+  }
+}
+
+@media (max-width: 590px) {
+  .util-wrapper {
+    width: 340px;
+  }
+  .nav .current-date {
+    font-size: 18px;
+  }
+  
+  .nav button {
+    font-size: 18px;
+  }
+  .calendar ul{
+    font-size: 14px;
+  }
+  .calendar .days li::before {
+    height: 30px;
+    width: 30px;
+  }
+  main .todo {
+    max-width: 340px;
+  }
+  .todo .add-todo {
+    flex-direction: column;
+  }
+  .todo .add-btn {
+    width: 100%;
+    height: 30px;
+    font-size: 14px;
+  }
+
 }
