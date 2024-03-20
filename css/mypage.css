@@ -47,7 +47,7 @@ main{
   list-style: none;
   flex-wrap: wrap;
   text-align: center;
-  font-size: 30px;
+  font-size: 24px;
 }
 
 
@@ -60,22 +60,21 @@ main{
   position: relative;
 }
 
-.calendar .days li {
+.calendar .days .date {
   z-index: 1;
-  margin-top: 25px;
-  cursor: pointer;
+  margin-top: 30px;
 }
 
-.days li.inactive {
+.days .date.inactive {
   color: #cccccc;
   cursor: pointer;
 }
 
-.days li.active {
+.days .date.active {
   color: #fff;
 }
 
-.calendar .days li::before {
+.calendar .days .date::before {
   position: absolute;
   content: '';
   height: 50px;
@@ -88,17 +87,18 @@ main{
   cursor: pointer;
 }
 
-.days li:hover {
+.days .date:hover {
   color: #72281D;
-  font-weight: 700;
+  font-weight: 500;
+  cursor: pointer;
 }
 
-.days li:hover::before {
+.days .date:hover::before {
   background: rgba(255, 199, 159, 1);
   background: linear-gradient(90deg, rgba(255, 236, 223, 1) 0%, rgba(255, 199, 159, 1) 100%);
 }
 
-.days li.active::before {
+.days .date.active::before {
   background: #008aff;
 }
 
@@ -121,10 +121,10 @@ main{
 
 .todo-title{
   text-align: center;
-  font-size: 24px;
+  font-size: 30px;
   font-weight: 700;
   color: #E9280E;
-  margin: 20px 0 30px 0;
+  margin: 10px 0 20px 0;
 }
 
 .todo-item{
@@ -177,9 +177,10 @@ outline: none;
   }
   .util-wrapper{
     margin-bottom: 30px;
+    aspect-ratio: 0;
   }
-  main .main-right .todo{
-    height: 100%;
+  main .todo{
+    aspect-ratio: 0;
   }
 }
 
@@ -190,22 +191,30 @@ outline: none;
   .nav .current-date {
     font-size: 18px;
   }
-  
   .nav button {
     font-size: 18px;
   }
   .calendar ul{
     font-size: 14px;
   }
-  .calendar .days li::before {
+  .calendar .days .date::before {
     height: 30px;
     width: 30px;
   }
   main .todo {
     max-width: 340px;
   }
+  .todo-title{
+    font-size: 20px;
+  }
+  .todo-item{
+    font-size: 16px;
+  }
   .todo .add-todo {
     flex-direction: column;
+  }
+  .todo .todo-input{
+    height: 30px;
   }
   .todo .add-btn {
     width: 100%;

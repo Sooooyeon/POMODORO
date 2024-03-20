@@ -146,22 +146,17 @@ main .main-right .utils section{
   position: relative;
 }
 
-.calendar .days li {
+.calendar .days .date {
   z-index: 1;
   margin-top: 4px;
   cursor: pointer;
 }
 
-.days li.inactive {
-  color: #aaa;
-  cursor: pointer;
-}
-
-.days li.active {
+.days .date.active {
   color: #fff;
 }
 
-.calendar .days li::before {
+.calendar .days .date::before {
   position: absolute;
   content: '';
   height: 22px;
@@ -174,15 +169,15 @@ main .main-right .utils section{
   cursor: pointer;
 }
 
-.days li:hover {
+.days .date:hover {
   color: white;
 }
 
-.days li:hover::before {
+.days .date:hover::before {
   background: #E9280E;
 }
 
-.days li.active::before {
+.days .date.active::before {
   background: #008aff;
 }
 

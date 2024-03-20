@@ -115,10 +115,11 @@ header .login-btn,.home-btn{
 } */
 
 /* footer */
-.footer {
-  height: 15px;
+footer {
+  height: 50px;
+  line-height: 50px;
   text-align: center;
   color: #677880;
   font-size: 12px;
-  margin: 30px 0;
+  padding: 30px 0;
 }
