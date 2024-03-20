@@ -19,17 +19,20 @@
   </header>
   <main>
     <section class="timer">
-      <p class="set-time">25:00</p>
+      <p class="set-time">
+        <span id="time-display-minutes">00</span><spna>:</spna><spna id="time-display-seconds">00</spna>
+      </p>
       <p class="set-text">SET</p>
       <div>
-        <button class="set-btn">25 <span>minute</span></button>
-        <button class="set-btn">5 <span>minute</span></button>
-        <button class="set-btn">30 <span>minute</span></button>
+        <button class="set-btn" onclick="setTimer(25)">25 <span>minute</span></button>
+        <button class="set-btn" onclick="setTimer(5)">5 <span>minute</span></button>
+        <button class="set-btn" onclick="setTimer(30)">30 <span>minute</span></button>
       </div>
       <div>
-        <button class="set-btn">START</button>
-        <button class="set-btn">STOP</button>
-        <button class="set-btn">RESET</button>
+        <button class="set-btn" onclick="startTimer()">START</button>
+        <button class="set-btn" onclick="stopTimer()">STOP</button>
+        <button class="set-btn" onclick="resetTimer()">RESET</button>
+        <audio id="alarm-sound" src="alarm.mp3" preload="auto"></audio>
       </div>
     </section>
     <div class="main-right">
@@ -52,7 +55,7 @@
                 <li>Sat</li>
               </ul>
               <ul class="days">
-                
+
               </ul>
             </div>
           </div>
@@ -71,13 +74,16 @@
         <div>
           <p class="todo-title">오늘의 할 일</p>
           <ul class="todo-list">
-            <li class="todo-item"><input type="checkbox" id="ch-box1" checked>
+            <li class="todo-item">
+              <input type="checkbox" id="ch-box1" checked>
               <label for="ch-box1">빨래 돌리기</label>
             </li>
-            <li class="todo-item"><input type="checkbox" id="ch-box2">
+            <li class="todo-item">
+              <input type="checkbox" id="ch-box2">
               <label for="ch-box2">화장실 청소하기</label>
             </li>
-            <li class="todo-item"><input type="checkbox" id="ch-box3">
+            <li class="todo-item">
+              <input type="checkbox" id="ch-box3">
               <label for="ch-box3">C++ 수업 복습하기</label>
             </li>
           </ul>
@@ -94,6 +100,7 @@
   </footer>
   <script src="./script/calendar.js"></script>
   <script src="./script/weather.js"></script>
+  <script src="./script/timer.js"></script>
 </body>
 
 </html>

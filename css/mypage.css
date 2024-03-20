@@ -133,7 +133,7 @@ main{
 .todo-item{
   font-size: 18px;
   padding: 5px;
-  color: #FF6B00;
+  color: #72281D;
   font-weight: 500;
 }
 
@@ -144,7 +144,7 @@ main{
 }
 
 .todo-item input[type="checkbox"]:checked+label {
-  color: #aaa;
+  color: #72281D;
   text-decoration: line-through;
 }
 .todo .add-todo{
@@ -169,7 +169,7 @@ outline: none;
 .todo .add-btn{
   width: 180px;
   height: 36px;
-  background-color: #E9280E;
+  background-color: #72281D;
   color: white;
   border-radius: 5px;
 }
