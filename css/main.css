@@ -17,6 +17,9 @@ main .timer {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  -webkit-box-shadow: 1px 3px 4px 0px rgba(206, 206, 206, 1);
+  -moz-box-shadow: 1px 3px 4px 0px rgba(206, 206, 206, 1);
+  box-shadow: 1px 3px 4px 0px rgba(206, 206, 206, 1);
 
 }
 
@@ -103,11 +106,13 @@ main .main-right .utils section{
   height: 200px;
   background: #fff;
   border-radius: 10px;
-  padding: 12px;
-  border: 1px solid #767676;
+  padding: 8px;
   font-size: 14px;
   box-sizing: border-box;
   text-align: center;
+  -webkit-box-shadow: 1px 3px 4px 0px rgba(206, 206, 206, 1);
+  -moz-box-shadow: 1px 3px 4px 0px rgba(206, 206, 206, 1);
+  box-shadow: 1px 3px 4px 0px rgba(206, 206, 206, 1);
 }
 
 .util-wrapper .nav {
@@ -189,6 +194,10 @@ main .main-right .utils section{
   gap: 10px;
 }
 
+.weather-title{
+  margin-top: 8px;
+}
+
 .weather-img{
   width: 100px;
   margin: 10px 0;
@@ -204,6 +213,9 @@ main .main-right .todo{
   flex-direction: column;
   justify-content: space-between;
   overflow: auto;
+  -webkit-box-shadow: 1px 3px 4px 0px rgba(206, 206, 206, 1);
+  -moz-box-shadow: 1px 3px 4px 0px rgba(206, 206, 206, 1);
+  box-shadow: 1px 3px 4px 0px rgba(206, 206, 206, 1);
 }
 
 .todo-list:last-child{
