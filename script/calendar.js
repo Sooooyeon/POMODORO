@@ -78,9 +78,3 @@ nextBtn.addEventListener("click", () => {
   renderCalendar();
 });
 
-
-
-console.log(date);
-console.log(year);
-console.log(month+1);
-console.log(months[month]);

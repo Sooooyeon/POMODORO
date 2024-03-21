@@ -7,7 +7,6 @@ document.addEventListener('DOMContentLoaded', () => {
   function addTodo() {
     // trim 사용해 좌우의 불필요한 여백 제거
     const todoText = todoInput.value.trim();
-    console.log(todoText);
 
     if(todoText !== '') {
 
