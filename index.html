@@ -20,7 +20,9 @@
   <main>
     <section class="timer">
       <p class="set-time">
-        <span id="time-display-minutes">00</span><spna>:</spna><spna id="time-display-seconds">00</spna>
+        <span id="time-display-minutes">00</span>
+        <spna>:</spna>
+        <spna id="time-display-seconds">00</spna>
       </p>
       <p class="set-text">SET</p>
       <div>
@@ -67,12 +69,12 @@
               <div class="weather-content">
                 <img class="weather-img" src="./img/weather.png" alt="날씨">
                 <div>
-                  <p class="place"></p>
-                  <p class="temperature"></p>
-                  <p class="weather-detail"></p>
+                  <p class="place">Seoul</p>
+                  <p class="temperature">25 &#8451;</p>
+                  <p class="weather-detail">맑음</p>
                 </div>
               </div>
-              
+
             </div>
           </div>
         </section>
@@ -127,11 +129,6 @@
   <script src="./script/timer.js"></script>
   <script type="module" src="./script/weather.js"></script>
   <script src="./script/todo.js"></script>
-  <script>
-    const todoInput = document.querySelector('.todo-input');
-
-    console.log(todoInput.value.trim());
-  </script>
 </body>
 
 </html>
