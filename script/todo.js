@@ -10,7 +10,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if(todoText !== '') {
 
-      // todoText에 내용이 있을 경우 todoItem 이라는 li요소 생성
+      const todoContainer = document.createElement('div');
+      const btnContainer = document.createElement('div');
+
+      // todoItem 이라는 li요소 생성
       const todoItem = document.createElement('li');
 
       // 생성한 todoItem에 클래스 추가
@@ -26,15 +29,53 @@ document.addEventListener('DOMContentLoaded', () => {
       label.setAttribute('for', checkbox.id);
       label.textContent = todoText;
 
-      // todoItem에 자식요소로 체크박스와 라벨 붙여줌
-      todoItem.appendChild(checkbox);
-      todoItem.appendChild(label);
+      const editBtn = document.createElement('button');
+      editBtn.classList.add('edit-btn')
+      const editImg = document.createElement('img');
+      editImg.setAttribute('src',"./img/icon-edit.svg");
 
-      // todoList에 todoItem를 자식요소로 붙임
+      const deleteBtn = document.createElement('button');
+      deleteBtn.classList.add('delete-btn')
+      const deleteImg = document.createElement('img');
+      deleteImg.setAttribute('src',"./img/icon-delete.svg");
+
+      // todoContainer에 자식요소로 체크박스와 라벨 붙여줌
+      todoContainer.appendChild(checkbox);
+      todoContainer.appendChild(label);
+
+      // 버튼에 자식요소로 이미지를 붙여줌
+      editBtn.appendChild(editImg);
+      deleteBtn.appendChild(deleteImg);
+
+      // btnContainer에 자식요소로 수정버튼과 삭제버튼 붙여줌
+      btnContainer.appendChild(editBtn);
+      btnContainer.appendChild(deleteBtn);
+
+      // todoItem에 todoContainer를 자식요소로 붙임
+      todoItem.appendChild(todoContainer);
+
+      // todoItem에 btnContainer 자식요소로 붙임
+      todoItem.appendChild(btnContainer);
+
+      // todoList에 자식요소로 todoItem붙임
       todoList.appendChild(todoItem);
 
       // 다음 일벽을 위해 입력창 초기화
       todoInput.value = ''; 
+
+      deleteBtn.addEventListener('click', function() {
+        todoList.removeChild(todoItem);
+      });
+
+      // 수정 버튼 이벤트 리스너 추가
+      editBtn.addEventListener('click', function() {
+        // 입력창에 현재 텍스트 삽입
+        todoInput.value = label.textContent;
+        // 수정할 때 해당 항목 삭제
+        todoList.removeChild(todoItem);
+        // 입력창에 포커스
+        todoInput.focus();
+      });
     }
   }
 
@@ -47,4 +88,5 @@ document.addEventListener('DOMContentLoaded', () => {
       addTodo();
     }
   });
+  
 });
