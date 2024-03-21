@@ -2,8 +2,7 @@ import { config } from "./api.js";
 const apiKey = config.apikey;
 
 
-
-//위치 정보를 가져오는 함수를 정의
+// 위치 기반 날씨 정보를 가져오는 함수 정의
 const getWeatherInfo = () => {
 
   const tempSection = document.querySelector('.temperature');
@@ -19,6 +18,7 @@ const getWeatherInfo = () => {
     getWeather(latitude, longitude);
   };
 
+  // 현재 위치의 날씨 정보 가져오기
   const getWeather = (lat, lon) => {
     fetch(
       `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${apiKey}&units=metric&lang=kr`
@@ -52,5 +52,4 @@ const getWeatherInfo = () => {
   navigator.geolocation.getCurrentPosition(onSuccess, onError);
 }
 
-// 위치 정보를 가져오기 위해 함수 호출
 getWeatherInfo();
