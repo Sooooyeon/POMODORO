@@ -1,7 +1,7 @@
 import { config } from "./api.js";
 const apiKey = config.apikey;
 
-
+document.addEventListener('DOMContentLoaded', () => {
 // 위치 기반 날씨 정보를 가져오는 함수 정의
 const getWeatherInfo = () => {
 
@@ -53,3 +53,4 @@ const getWeatherInfo = () => {
 }
 
 getWeatherInfo();
+})
