@@ -194,8 +194,15 @@ main .main-right .utils section{
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 10px;
+  /* gap: 10px; */
 }
+
+/* .weather-content{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+} */
 
 .weather-title{
   margin-top: 8px;
@@ -203,7 +210,6 @@ main .main-right .utils section{
 
 .weather-img{
   width: 100px;
-  margin: 10px 0;
 }
 
 main .main-right .todo{

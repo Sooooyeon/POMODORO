@@ -64,8 +64,15 @@
           <div class="util-wrapper">
             <div class="weather-box">
               <p class="weather-title">오늘의 날씨</p>
-              <img class="weather-img" src="./img/icon-cloudy.png" alt="흐림">
-              <p class="weather-detail">흐림, 5&#8451;</p>
+              <div class="weather-content">
+                <img class="weather-img" src="./img/icon-cloudy.png" alt="흐림">
+                <div>
+                  <p class="place">서울 특별시</p>
+                  <p class="temperature">서울 특별시</p>
+                  <p class="weather-detail">흐림, 5&#8451;</p>
+                </div>
+              </div>
+              
             </div>
           </div>
         </section>
@@ -99,8 +106,8 @@
     <p>Copyright 2024. Sooyeon Jang All rights reserved.</p>
   </footer>
   <script src="./script/calendar.js"></script>
-  <script src="./script/weather.js"></script>
   <script src="./script/timer.js"></script>
+  <script type="module" src="./script/weather.js"></script>
 </body>
 
 </html>
