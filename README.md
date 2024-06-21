@@ -54,7 +54,7 @@ https://github.com/Sooooyeon/POMODORO/assets/118328426/1c7611b0-1bef-4704-a353-f
 </br>
 
 ### 4. 날씨 정보 표시
-날씨 API를 사용헤 해당 위치 기반의 날씨 정보를 화면에 출력합니다.
+날씨 API를 사용해 해당 위치 기반의 날씨 정보를 화면에 출력합니다.
 
 </br>
 
